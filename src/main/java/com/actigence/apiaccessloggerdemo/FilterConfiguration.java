@@ -15,6 +15,7 @@ public class FilterConfiguration
         FilterRegistrationBean<ApiAccessLoggingFilter> registrationBean = new FilterRegistrationBean<>();
         registrationBean.setFilter(new ApiAccessLoggingFilter());
         registrationBean.addUrlPatterns("/test/*");
+        registrationBean.addInitParameter("clientId", "MyServiceName");
         return registrationBean;
     }
 }
